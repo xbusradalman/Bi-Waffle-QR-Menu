@@ -604,54 +604,57 @@
     }
 
     /* Ürün modalı */
-    .product-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 200;
-      padding: 20px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
+.product-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
-    .product-modal.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
+.product-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
-    .product-modal-card {
-      background: #fff;
-      border-radius: 18px;
-      max-width: 480px;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-      position: relative;
-      transform: translateY(24px) scale(0.96);
-      opacity: 0;
-      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.26s ease-out;
-    }
+/* BURAYI UZUN VE KARE YAPACAK ŞEKİLDE DÜZENLEDİM */
+.product-modal-card {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform: translateY(24px) scale(0.96);
+  opacity: 0;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.26s ease-out;
 
-    .product-modal.show .product-modal-card {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
+  /* EKLENENLER */
+  min-height: 520px;     /* modal boyunu uzattı */
+  display: flex;
+  flex-direction: column;
+}
 
-    .product-modal-image {
-      width: 100%;
-      height: 220px;
-      background-size: cover;
-      background-position: center;
-      background-color: #ddd;
-    }
+/* Görseli biraz daha büyük yaptım (kare hissi için iyi) */
+.product-modal-image {
+  width: 100%;
+  height: 260px;           /* önce 220 idi → biraz büyüttüm */
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+}
 
-    .product-modal-body {
-      padding: 16px 18px 18px;
-    }
+.product-modal-body {
+  padding: 16px 18px 18px;
+}
+
 
     .feedback-modal {
       position: fixed;
